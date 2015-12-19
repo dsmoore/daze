@@ -1,0 +1,53 @@
+form{
+  // Typography
+  text-transform: uppercase;
+
+  label{
+    color: #1F3E77;
+    letter-spacing: 3px;
+  }
+
+  // Checkboxes
+  ul{
+    width: 100%;
+    &:after{
+      content: "";
+      clear: both;
+      display: table;
+    }
+  }
+  ul li{
+    text-align: center;
+    float: left;
+    margin: 15px;
+    input[type=checkbox] {
+      display: none;
+    }
+    input[type=checkbox] + label{
+      cursor: pointer;
+      display: inline-block;
+      width: 130px;
+      height: 75px;
+      border-radius: 300px;
+      padding-top: 55px;
+      vertical-align: middle;
+
+      background: #50E3C2;
+      box-shadow: 2px 2px 0 1px #1F3E77;
+      transition: all .2s ease;
+      &:hover{
+        transform: scale(.9);
+        color: #1F3E77;
+      }
+    }
+    input[type=checkbox]:checked + label{
+      transform: scale(.5);
+      color: transparent;
+      &:hover{
+        transform: scale(.9);
+        color: #1F3E77;
+      }
+    }
+  }
+
+}

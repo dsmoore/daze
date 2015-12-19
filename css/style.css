@@ -1,0 +1,205 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+section {
+  display: table;
+  width: 100%;
+  height: 100vh;
+}
+
+section .vBlock {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+section article {
+  max-width: 640px;
+  width: 100%;
+  margin: 50px auto 0 auto;
+}
+
+body {
+  background: url("../img/bg.png") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1, h2, h3, li, p, a, textarea, input {
+  font-family: "brandon-grotesque",sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  background: url("../img/header-bg.png") no-repeat center center;
+  background-size: cover;
+  z-index: 1000;
+  top: 0;
+}
+@media (max-width: 768px) {
+  header {
+    height: 50px;
+  }
+}
+header nav h1 {
+  text-align: center;
+  background: url("../img/logo.svg") no-repeat center center;
+  height: 100px;
+  text-indent: -9999px;
+  -webkit-transition: all .2s ease;
+          transition: all .2s ease;
+}
+@media (max-width: 768px) {
+  header nav h1 {
+    background-size: 50% 50%;
+    height: 50px;
+  }
+}
+header nav h1:hover {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+}
+header nav a.about-button {
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: #1F3E77;
+  border-radius: 30px;
+  font-size: 25px;
+  -webkit-transition: all .2s ease;
+          transition: all .2s ease;
+}
+header nav a.about-button:hover {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+}
+@media (max-width: 768px) {
+  header nav a.about-button {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+p {
+  font-size: 30px;
+  line-height: 40px;
+  padding: 30px;
+  color: #fff;
+}
+
+form {
+  text-transform: uppercase;
+}
+form label {
+  color: #1F3E77;
+  letter-spacing: 3px;
+}
+form ul {
+  width: 100%;
+}
+form ul:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+form ul li {
+  text-align: center;
+  float: left;
+  margin: 15px;
+}
+form ul li input[type=checkbox] {
+  display: none;
+}
+form ul li input[type=checkbox] + label {
+  cursor: pointer;
+  display: inline-block;
+  width: 130px;
+  height: 75px;
+  border-radius: 300px;
+  padding-top: 55px;
+  vertical-align: middle;
+  background: #50E3C2;
+  box-shadow: 2px 2px 0 1px #1F3E77;
+  -webkit-transition: all .2s ease;
+          transition: all .2s ease;
+}
+form ul li input[type=checkbox] + label:hover {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+  color: #1F3E77;
+}
+form ul li input[type=checkbox]:checked + label {
+  -webkit-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+          transform: scale(0.5);
+  color: transparent;
+}
+form ul li input[type=checkbox]:checked + label:hover {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+  color: #1F3E77;
+}

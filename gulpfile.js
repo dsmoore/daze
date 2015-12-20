@@ -10,7 +10,7 @@
       sass = require('gulp-ruby-sass'),
       autoprefixer = require('gulp-autoprefixer'),
       minifycss = require('gulp-minify-css'),
-      jshint = require('gulp-jshint'),
+      // jshint = require('gulp-jshint'),
       uglify = require('gulp-uglify'),
       imagemin = require('gulp-imagemin'),
       rename = require('gulp-rename'),
@@ -34,18 +34,18 @@
   });
 
 // Scripts
-  gulp.task('scripts', function() {
-    return gulp.src('src/js/**/*.js')
-      .pipe(modernizr())
-      // .pipe(jshint('.jshintrc'))
-      // .pipe(jshint.reporter('default'))
-      .pipe(concat('scripts.js'))
-      .pipe(gulp.dest('js'))
-      .pipe(rename({ suffix: '.min' }))
-      .pipe(uglify())
-      .pipe(gulp.dest('js'))
-      .pipe(notify({ message: 'Scripts task complete' }));
-  });
+  // gulp.task('scripts', function() {
+  //   return gulp.src('src/js/**/*.js')
+  //     .pipe(modernizr())
+  //     // .pipe(jshint('.jshintrc'))
+  //     // .pipe(jshint.reporter('default'))
+  //     .pipe(concat('scripts.js'))
+  //     .pipe(gulp.dest('js'))
+  //     .pipe(rename({ suffix: '.min' }))
+  //     .pipe(uglify())
+  //     .pipe(gulp.dest('js'))
+  //     .pipe(notify({ message: 'Scripts task complete' }));
+  // });
 
 // Images
   gulp.task('images', function() {
@@ -70,12 +70,12 @@
 
 // Clean
   gulp.task('clean', function(cb) {
-      del(['css', 'js', 'img'], cb)
+      del(['css', 'img'], cb)
   });
 
 // Default task
   gulp.task('build', ['clean'], function() {
-      gulp.start('minify', 'sass', 'scripts', 'images');
+      gulp.start('minify', 'sass', 'images');
   });
 
 // Watch
@@ -85,7 +85,7 @@
     gulp.watch('src/scss/**/*.scss', ['sass']);
 
     // Watch .js files
-    gulp.watch('src/js/**/*.js', ['scripts']);
+    // gulp.watch('src/js/**/*.js', ['scripts']);
 
     // Watch image files
     gulp.watch('src/img/**/*', ['images']);

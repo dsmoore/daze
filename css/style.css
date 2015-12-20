@@ -109,14 +109,18 @@ header nav h1 {
   }
 }
 header nav h1:hover {
-  -webkit-transform: scale(0.9);
-      -ms-transform: scale(0.9);
-          transform: scale(0.9);
+  -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+          transform: scale(0.95);
 }
-header nav a.about-button {
+header nav a:active h1 {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+input[type="reset"], a.about-button {
   position: fixed;
-  right: 30px;
-  top: 30px;
   color: #fff;
   text-decoration: none;
   display: block;
@@ -129,16 +133,47 @@ header nav a.about-button {
   font-size: 25px;
   -webkit-transition: all .2s ease;
           transition: all .2s ease;
+  z-index: 10000;
+  padding: 5px;
 }
-header nav a.about-button:hover {
+input[type="reset"]:hover, a.about-button:hover {
   -webkit-transform: scale(0.9);
       -ms-transform: scale(0.9);
           transform: scale(0.9);
 }
+input[type="reset"]:active, a.about-button:active {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+input[type="reset"] {
+  left: 30px;
+  top: 30px;
+  font-style: normal;
+  font-family: Helvetica;
+  font-size: 23px;
+  -webkit-appearance: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
 @media (max-width: 768px) {
-  header nav a.about-button {
-    top: 10px;
+  input[type="reset"] {
+    top: 8px;
+    left: 10px;
+  }
+}
+
+a.about-button {
+  right: 30px;
+  top: 30px;
+}
+@media (max-width: 768px) {
+  a.about-button {
+    top: 8px;
     right: 10px;
+    padding: 2px;
   }
 }
 
@@ -198,8 +233,8 @@ form ul li input[type=checkbox]:checked + label {
   color: transparent;
 }
 form ul li input[type=checkbox]:checked + label:hover {
-  -webkit-transform: scale(0.9);
-      -ms-transform: scale(0.9);
-          transform: scale(0.9);
+  -webkit-transform: scale(0.6);
+      -ms-transform: scale(0.6);
+          transform: scale(0.6);
   color: #1F3E77;
 }

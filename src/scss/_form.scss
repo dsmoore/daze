@@ -1,7 +1,11 @@
 form{
   // Typography
   text-transform: uppercase;
-
+  max-width: 480px;
+  margin: 0 auto;
+  @media (max-width: 480px) {
+    max-width: 320px;
+  }
   label{
     color: #1F3E77;
     letter-spacing: 3px;

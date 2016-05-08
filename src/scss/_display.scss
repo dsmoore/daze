@@ -1,5 +1,6 @@
 // Body
 body{
+
 }
 
 // Typography
@@ -26,6 +27,10 @@ header{
       font-size: 40px;
       line-height: 50px;
       letter-spacing: 4px;
+      a{
+        text-decoration: line-through;
+        color: #222;
+      }
     }
     a:active h1{
       transform: scale(1);

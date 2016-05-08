@@ -36,12 +36,11 @@ form{
       border-radius: 300px;
       line-height: 120px;
       vertical-align: middle;
-      background: #222;
-      border: 5px solid transparent;
+      border: 5px solid #fff;
       transition: all .2s ease;
       color: #fff;
       &:hover{
-        background: #444;
+        background: rgba(255, 255, 255, .175);
       }
     }
     input[type=checkbox]:checked + label{

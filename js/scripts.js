@@ -1,4 +1,5 @@
   $(function() {
+
     FastClick.attach(document.body);
 
     // Homepage smooth scroll

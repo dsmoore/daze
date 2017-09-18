@@ -1,0 +1,92 @@
+{
+  "name": "dsmoore/daze",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "DAZE",
+  "branch": "gh-pages",
+  "style": {
+    "name": "Swiss",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/SwissHeader",
+      "article": "article/SwissArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
+    "heading": {
+      "fontWeight": 700,
+      "letterSpacing": "-0.01em"
+    },
+    "layout": {
+      "fluid": true
+    },
+    "colors": {
+      "text": "#000",
+      "background": "#fff",
+      "primary": "#05a",
+      "secondary": "#444",
+      "highlight": "#f30",
+      "border": "#ccc",
+      "muted": "#eee"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "http://dsmoore.github.io/daze",
+          "text": "Home"
+        },
+        {
+          "href": "https://github.com/dsmoore/daze",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/WordpressStarter",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "daze",
+      "subhead": "Starter Wordpress Kit",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "daze: Starter Wordpress Kit",
+          "url": "http://dsmoore.github.io/daze"
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "dsmoore",
+          "repo": "daze"
+        }
+      ],
+      "text": "v1.0.0"
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "<h1>- D A Z E</h1>\n<p>DAZE is a simple list of daily activities to help focus on a grounded, self-aware and positive lifestyle.</p>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/dsmoore/daze",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/dsmoore",
+          "text": "dsmoore"
+        }
+      ]
+    }
+  ]
+}
